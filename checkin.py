@@ -6,8 +6,8 @@ import requests
 from pypushdeer import PushDeer
 
 
-CHECKIN_URL = "https://glados.space/api/user/checkin"
-STATUS_URL = "https://glados.space/api/user/status"
+CHECKIN_URL = "https://glados.cloud/api/user/checkin"
+STATUS_URL = "https://glados.cloud/api/user/status"
 
 HEADERS_BASE = {
     "origin": "https://glados.space",
