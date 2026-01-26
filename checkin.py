@@ -89,12 +89,17 @@ def main():
 
         except Exception:
             fail += 1
-            status = "❌ 异常"
+            status = f"❌ 异常，报错信息:{msg}"
 
         lines.append(f"{idx}. {email} | {status} | P:{points} | 剩余:{days}")
         time.sleep(random.uniform(1, 2))
 
-    title = f"GLaDOS 签到完成 ✅{ok} ❌{fail} 🔁{repeat}"
+    if ok:
+        title = "GLaDOS 签到成功 ✅"
+    if fail:
+        title = "GLaDOS 签到失败 ❌"
+    if repeat:
+        title = "GLaDOS 签到重复 🔁"
     content = "\n".join(lines)
 
     print(content)
